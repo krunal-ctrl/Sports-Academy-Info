@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Hello</h1>
+
+    {% for x in dic1 %}
+    {{ x.name }}
+    {{ x.desc }}
+    {% endfor %}
+        <br>
+    {% for x in dic2 %}
+    {{ x.name }}
+    {{ x.exp }}
+    {{ x.academy }}
+    {% endfor %}
+    {% endblock content%}
+</body>
+</html>
