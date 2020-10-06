@@ -8,7 +8,7 @@
   </a>
 </p>
   
-> This website helps the people to find the gym, sports acadamy, yoga center which is nearest to them. It also remind the user and motivate the user to do excercise. 
+**This website helps the people to find the gym, sports acadamy, yoga center which is nearest to them. It also remind the user and motivate the user to do excercise.**
 
 Website is made using the Django frame work which is the widly used frame work to develop the website using python.
 
@@ -30,3 +30,8 @@ and clean, pragmatic design. Thanks for checking it out.
 All documentation is in the "``docs``" directory and online at
 https://docs.djangoproject.com/en/stable/. If you're just getting started,
 here's how we recommend you read the docs:
+
+**Contributors:** <!-- Generate contributors list using this link - https://contributors-img.web.app/preview -->
+<a href="https://github.com/dhruv-vachhani/Sports-Academy-Info/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=dhruv-vachhani/Sports-Academy-Info" />
+</a>
