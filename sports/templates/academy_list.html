@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Academys</h1>
+    {% if academy_list %}
+        <ul>
+            {% for ac in academy_list %}
+            <li> 
+                <a href="{{ acdemy.get_absolute_url }}">
+                    {{ acdemy.name }}
+                </a>                
+                {{ acdemy.desc }}
+            </li>            
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endblock%}
+</body>
+</html>
