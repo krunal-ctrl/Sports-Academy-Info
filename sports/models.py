@@ -1,8 +1,6 @@
 from django.db import models
 from django.urls import reverse
 
-# Create your models here.
-
 class Academy(models.Model):
     name=models.CharField(max_length=200)    
     desc = models.TextField(max_length=1000,help_text="Enter a brief desc of academy")
@@ -15,7 +13,6 @@ class Academy(models.Model):
 
     def get_absolute_url(self):
         return reverse('academy-detail', args = [str(self.id)])
-
         
 class Coach(models.Model):
     academy = models.ForeignKey(Academy,on_delete=models.SET_NULL,null=True)
@@ -23,7 +20,6 @@ class Coach(models.Model):
     exp = models.IntegerField()
     def __str__(self):
         return self.name
-
 
 class Sports(models.Model):
     academy = models.ForeignKey(Academy,on_delete=models.SET_NULL,null=True)
