@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .models import Academy,Sports,Coach
 # Create your views here.
 from django.views import generic
+from django.http import request
 
 def index(request):
     acd = Academy.objects.all()
@@ -18,6 +19,6 @@ class AcademyListView(generic.ListView):
 
 class AcademyDetailView(generic.DetailView):
     model = Academy
-    def academy_detail_view(request,primary_key):
+    def academy_detail_view(self,primary_key):
         academy = get_object_or_404(Academy,pk = primary_key)
         return render(request , 'sports/academy_detail.html' , context={'academy':academy})
