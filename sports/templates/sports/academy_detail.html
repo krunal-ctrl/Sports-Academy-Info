@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Academy Detail</title>
 </head>
 <body>
-    <!-- {% extends 'base.html' %} -->
     {% block content %}
 
     <h1>{{ academy.name }}</h1><br>
     <h3>{{ academy.desc }}</h3><br>
     <h3>{{ academy.address }}</h3>
-    
+    <h6>{{ academy.start_time }}</h6>
+    <h6>{{ academy.end_time }}</h6>
     {% endblock %}
 </body>
 </html>

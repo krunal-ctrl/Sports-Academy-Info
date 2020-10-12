@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -11,6 +12,9 @@ class Academy(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('academy-detail', args = [str(self.id)])
 
         
 class Coach(models.Model):

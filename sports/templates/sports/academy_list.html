@@ -10,13 +10,13 @@
     <h1>Academys</h1>
     {% if academy_list %}
         <ul>
-            {% for ac in academy_list %}
+            {% for academy in academy_list %}
             <li> 
-                <a href="{{ acdemy.get_absolute_url }}">
-                    {{ acdemy.name }}
+                <a href="{{ academy.get_absolute_url }}">
+                    {{ academy.name }} <br>
                 </a>                
-                {{ acdemy.desc }}
-            </li>            
+            </li>        
+
             {% endfor %}
         </ul>
     {% endif %}
