@@ -18,6 +18,7 @@ class Coach(models.Model):
     academy = models.ForeignKey(Academy,on_delete=models.SET_NULL,null=True)
     name=models.CharField(max_length=200)
     exp = models.IntegerField()
+
     def __str__(self):
         return self.name
 
@@ -25,5 +26,6 @@ class Sports(models.Model):
     academy = models.ForeignKey(Academy,on_delete=models.SET_NULL,null=True)
     sports_name = models.CharField(max_length=200)
     sports_type = models.CharField(max_length=200)
-    def __str__(self):
+    
+    def __str__(self):        
         return self.sports_name

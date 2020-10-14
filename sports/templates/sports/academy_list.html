@@ -11,11 +11,11 @@
     {% if academy_list %}
         <ul>
             {% for academy in academy_list %}
-            <li> 
+            <li>
                 <a href="{{ academy.get_absolute_url }}">
                     {{ academy.name }} <br>
-                </a>                
-            </li>        
+                </a>
+            </li>
 
             {% endfor %}
         </ul>

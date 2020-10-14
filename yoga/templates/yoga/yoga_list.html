@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness List</title>
+    <title>Yoga List</title>
 </head>
 <body>
     {% block content %}
-    <h1>Gyms</h1>
-    {% if fitness_list %}
+    <h1>Yoga centers</h1>
+    {% if yoga_list %}
         <ul>
-            {% for fitness in fitness_list %}
+            {% for yoga in yoga_list %}
             <li>
-                <a href="{{ fitness.get_absolute_url }}">
-                    {{ fitness.name }} <br>
+                <a href="{{ yoga.get_absolute_url }}">
+                    {{ yoga.name }} <br>
                 </a>
             </li>
 

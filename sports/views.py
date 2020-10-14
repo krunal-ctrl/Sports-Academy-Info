@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from .models import Academy,Sports,Coach
-# Create your views here.
+
 from django.views import generic
 from django.http import request
 

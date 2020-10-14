@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Fitness,Trainer,TrainingLevel
 
-# Register your models here.
+admin.site.register(Fitness)
+admin.site.register(Trainer)
+admin.site.register(TrainingLevel)
