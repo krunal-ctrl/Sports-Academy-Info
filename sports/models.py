@@ -7,6 +7,8 @@ class Academy(models.Model):
     address = models.TextField(max_length=1000,help_text="Enter address of academy")
     start_time = models.TimeField(auto_now=False,auto_now_add=False)
     end_time = models.TimeField(auto_now=False,auto_now_add=False)
+    contact_no = models.IntegerField(null=True,blank=True)
+    email = models.EmailField(blank=True,null=True)
 
     def __str__(self):
         return self.name
