@@ -10,6 +10,9 @@ class Academy(models.Model):
     contact_no = models.IntegerField(null=True,blank=True)
     email = models.EmailField(blank=True,null=True)
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 
@@ -21,6 +24,9 @@ class Coach(models.Model):
     name=models.CharField(max_length=200)
     exp = models.IntegerField()
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 
@@ -29,5 +35,8 @@ class Sports(models.Model):
     sports_name = models.CharField(max_length=200)
     sports_type = models.CharField(max_length=200)
     
+    class Meta:
+        ordering = ['sports_name', 'sports_type']
+
     def __str__(self):        
         return self.sports_name
