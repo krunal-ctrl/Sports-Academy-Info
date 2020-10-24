@@ -18,7 +18,6 @@ class Yoga(models.Model):
 
     def get_absolute_url(self):
         return reverse('yoga-detail', args = [str(self.id)])
-
         
 class Trainer(models.Model):
     yoga = models.ForeignKey(Yoga,on_delete=models.SET_NULL,null=True)
