@@ -9,6 +9,7 @@ class Yoga(models.Model):
     end_time = models.TimeField(auto_now=False,auto_now_add=False)
     contact_no = models.IntegerField(null=True,blank=True)
     email = models.EmailField(blank=True,null=True)
+    city = models.CharField(max_length=200,default="", editable=False)
 
     class Meta:
         ordering = ['name']
