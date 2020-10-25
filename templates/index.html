@@ -3,7 +3,7 @@
 <head>
 
      <title>Gymso Fitness HTML Template</title>
-
+     {% load static %}
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
@@ -11,12 +11,12 @@
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/aos.css' %}">
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/tooplate-gymso-style.css">
+     <link rel="stylesheet" href="{% static 'css/tooplate-gymso-style.css' %}">
 <!--
 Tooplate 2119 Gymso Fitness
 https://www.tooplate.com/view/2119-gymso-fitness
@@ -28,7 +28,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
 
-            <a class="navbar-brand" href="index.html">Gymso Fitness</a>
+            <a class="navbar-brand" href="#home">Sports Academy Info</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -50,16 +50,27 @@ https://www.tooplate.com/view/2119-gymso-fitness
                     </li>
 
                     <li class="nav-item">
-                        <a href="#schedule" class="nav-link smoothScroll">Schedules</a>
+                        <a href="{% url 'academy' %}" class="nav-link smoothScroll">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'fitness' %}" class="nav-link smoothScroll">Fitness</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
+                        <a href="{% url 'center' %}" class="nav-link smoothScroll">Yoga</a>
                     </li>
+
+<!--                    <li class="nav-item">-->
+<!--                        <a href="#schedule" class="nav-link smoothScroll">Schedules</a>-->
+<!--                    </li>-->
+
+<!--                    <li class="nav-item">-->
+<!--                        <a href="#contact" class="nav-link smoothScroll">Contact</a>-->
+<!--                    </li>-->
                 </ul>
 
                 <ul class="social-icon ml-lg-3">
-                    <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                 </ul>
@@ -87,7 +98,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                                     <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">Get started</a>
 
                                     <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">learn more</a>
-                                   
+
                               </div>
                          </div>
 
@@ -131,61 +142,61 @@ https://www.tooplate.com/view/2119-gymso-fitness
                 </div>
 
             </div>
-        </div>
+<!--        </div>-->
     </section>
 
 
      <!-- ABOUT -->
-     <section class="about section" id="about">
-               <div class="container">
-                    <div class="row">
+<!--     <section class="about section" id="about">-->
+<!--               <div class="container">-->
+<!--                    <div class="row">-->
 
-                            <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
-                                <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Hello, we are Gymso</h2>
+<!--                            <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">-->
+<!--                                <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Hello, we are Gymso</h2>-->
 
-                                <p data-aos="fade-up" data-aos-delay="400">You are NOT allowed to redistribute this HTML template downloadable ZIP file on any template collection site. You are allowed to use this template for your personal or business websites.</p>
+<!--                                <p data-aos="fade-up" data-aos-delay="400">You are NOT allowed to redistribute this HTML template downloadable ZIP file on any template collection site. You are allowed to use this template for your personal or business websites.</p>-->
 
-                                <p data-aos="fade-up" data-aos-delay="500">If you have any question regarding <a rel="nofollow" href="https://www.tooplate.com/view/2119-gymso-fitness" target="_parent">Gymso Fitness HTML template</a>, you can <a rel="nofollow" href="https://www.tooplate.com/contact" target="_parent">contact Tooplate</a> immediately. Thank you.</p>
+<!--                                <p data-aos="fade-up" data-aos-delay="500">If you have any question regarding <a rel="nofollow" href="https://www.tooplate.com/view/2119-gymso-fitness" target="_parent">Gymso Fitness HTML template</a>, you can <a rel="nofollow" href="https://www.tooplate.com/contact" target="_parent">contact Tooplate</a> immediately. Thank you.</p>-->
 
-                            </div>
+<!--                            </div>-->
 
-                            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">
-                                <div class="team-thumb">
-                                    <img src="images/team/team-image.jpg" class="img-fluid" alt="Trainer">
+<!--                            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">-->
+<!--                                <div class="team-thumb">-->
+<!--                                    <img src="{% static 'images/team/team-image.jpg' %}" class="img-fluid" alt="Trainer">-->
 
-                                    <div class="team-info d-flex flex-column">
+<!--                                    <div class="team-info d-flex flex-column">-->
 
-                                        <h3>Mary Yan</h3>
-                                        <span>Yoga Instructor</span>
+<!--                                        <h3>Mary Yan</h3>-->
+<!--                                        <span>Yoga Instructor</span>-->
 
-                                        <ul class="social-icon mt-3">
-                                            <li><a href="#" class="fa fa-twitter"></a></li>
-                                            <li><a href="#" class="fa fa-instagram"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+<!--                                        <ul class="social-icon mt-3">-->
+<!--                                            <li><a href="#" class="fa fa-twitter"></a></li>-->
+<!--                                            <li><a href="#" class="fa fa-instagram"></a></li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
-                            <div class="mr-lg-auto mt-5 mt-lg-0 mt-md-0 col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="800">
-                                <div class="team-thumb">
-                                    <img src="images/team/team-image01.jpg" class="img-fluid" alt="Trainer">
+<!--                            <div class="mr-lg-auto mt-5 mt-lg-0 mt-md-0 col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="800">-->
+<!--                                <div class="team-thumb">-->
+<!--                                    <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">-->
 
-                                    <div class="team-info d-flex flex-column">
+<!--                                    <div class="team-info d-flex flex-column">-->
 
-                                        <h3>Catherina</h3>
-                                        <span>Body trainer</span>
+<!--                                        <h3>Catherina</h3>-->
+<!--                                        <span>Body trainer</span>-->
 
-                                        <ul class="social-icon mt-3">
-                                            <li><a href="#" class="fa fa-instagram"></a></li>
-                                            <li><a href="#" class="fa fa-facebook"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+<!--                                        <ul class="social-icon mt-3">-->
+<!--                                            <li><a href="#" class="fa fa-instagram"></a></li>-->
+<!--                                            <li><a href="#" class="fa fa-facebook"></a></li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
-                    </div>
-               </div>
-     </section>
+<!--                    </div>-->
+<!--               </div>-->
+<!--     </section>-->
 
 
      <!-- CLASS -->
@@ -201,7 +212,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
                             <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
                                 <div class="class-thumb">
-                                    <img src="images/class/yoga-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="{% static 'images/class/yoga-class.jpg' %}" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="mb-1">Yoga</h3>
@@ -217,7 +228,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
                             <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
                                 <div class="class-thumb">
-                                    <img src="images/class/crossfit-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="{% static 'images/class/crossfit-class.jpg' %}" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="mb-1">Areobic</h3>
@@ -233,7 +244,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
                             <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
                                 <div class="class-thumb">
-                                    <img src="images/class/cardio-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="{% static 'images/class/cardio-class.jpg' %}" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="mb-1">Cardio</h3>
@@ -253,113 +264,113 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
 
      <!-- SCHEDULE -->
-     <section class="schedule section" id="schedule">
-               <div class="container">
-                    <div class="row">
+<!--     <section class="schedule section" id="schedule">-->
+<!--               <div class="container">-->
+<!--                    <div class="row">-->
 
-                            <div class="col-lg-12 col-12 text-center">
-                                <h6 data-aos="fade-up">our weekly GYM schedules</h6>
+<!--                            <div class="col-lg-12 col-12 text-center">-->
+<!--                                <h6 data-aos="fade-up">our weekly GYM schedules</h6>-->
 
-                                <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">Workout Timetable</h2>
-                             </div>
+<!--                                <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">Workout Timetable</h2>-->
+<!--                             </div>-->
 
-                             <div class="col-lg-12 py-5 col-md-12 col-12">
-                                 <table class="table table-bordered table-responsive schedule-table" data-aos="fade-up" data-aos-delay="300">
+<!--                             <div class="col-lg-12 py-5 col-md-12 col-12">-->
+<!--                                 <table class="table table-bordered table-responsive schedule-table" data-aos="fade-up" data-aos-delay="300">-->
 
-                                     <thead class="thead-light">
-                                         <th><i class="fa fa-calendar"></i></th>
-                                         <th>Mon</th>
-                                         <th>Tue</th>
-                                         <th>Wed</th>
-                                         <th>Thu</th>
-                                         <th>Fri</th>
-                                         <th>Sat</th>
-                                     </thead>
+<!--                                     <thead class="thead-light">-->
+<!--                                         <th><i class="fa fa-calendar"></i></th>-->
+<!--                                         <th>Mon</th>-->
+<!--                                         <th>Tue</th>-->
+<!--                                         <th>Wed</th>-->
+<!--                                         <th>Thu</th>-->
+<!--                                         <th>Fri</th>-->
+<!--                                         <th>Sat</th>-->
+<!--                                     </thead>-->
 
-                                     <tbody>
-                                         <tr>
-                                            <td><small>7:00 am</small></td>
-                                            <td>
-                                                <strong>Cardio</strong>
-                                                <span>7:00 am - 9:00 am</span>
-                                            </td>
-                                            <td>
-                                                <strong>Power Fitness</strong>
-                                                <span>7:00 am - 9:00 am</span>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                <strong>Yoga Section</strong>
-                                                <span>7:00 am - 9:00 am</span>
-                                            </td>
-                                         </tr>
+<!--                                     <tbody>-->
+<!--                                         <tr>-->
+<!--                                            <td><small>7:00 am</small></td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Cardio</strong>-->
+<!--                                                <span>7:00 am - 9:00 am</span>-->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Power Fitness</strong>-->
+<!--                                                <span>7:00 am - 9:00 am</span>-->
+<!--                                            </td>-->
+<!--                                            <td></td>-->
+<!--                                            <td></td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Yoga Section</strong>-->
+<!--                                                <span>7:00 am - 9:00 am</span>-->
+<!--                                            </td>-->
+<!--                                         </tr>-->
 
-                                         <tr>
-                                            <td><small>9:00 am</small></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                <strong>Boxing</strong>
-                                                <span>8:00 am - 9:00 am</span>
-                                            </td>
-                                            <td>
-                                                <strong>Areobic</strong>
-                                                <span>8:00 am - 9:00 am</span>
-                                            </td>
-                                            <td></td>
-                                            <td>
-                                                <strong>Cardio</strong>
-                                                <span>8:00 am - 9:00 am</span>
-                                            </td>
-                                         </tr>
+<!--                                         <tr>-->
+<!--                                            <td><small>9:00 am</small></td>-->
+<!--                                            <td></td>-->
+<!--                                            <td></td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Boxing</strong>-->
+<!--                                                <span>8:00 am - 9:00 am</span>-->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Areobic</strong>-->
+<!--                                                <span>8:00 am - 9:00 am</span>-->
+<!--                                            </td>-->
+<!--                                            <td></td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Cardio</strong>-->
+<!--                                                <span>8:00 am - 9:00 am</span>-->
+<!--                                            </td>-->
+<!--                                         </tr>-->
 
-                                         <tr>
-                                            <td><small>11:00 am</small></td>
-                                            <td></td>
-                                            <td>
-                                                <strong>Boxing</strong>
-                                                <span>11:00 am - 2:00 pm</span>
-                                            </td>
-                                            <td>
-                                                <strong>Areobic</strong>
-                                                <span>11:30 am - 3:30 pm</span>
-                                            </td>
-                                            <td></td>
-                                            <td>
-                                                <strong>Body work</strong>
-                                                <span>11:50 am - 5:20 pm</span>
-                                            </td>
-                                         </tr>
+<!--                                         <tr>-->
+<!--                                            <td><small>11:00 am</small></td>-->
+<!--                                            <td></td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Boxing</strong>-->
+<!--                                                <span>11:00 am - 2:00 pm</span>-->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Areobic</strong>-->
+<!--                                                <span>11:30 am - 3:30 pm</span>-->
+<!--                                            </td>-->
+<!--                                            <td></td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Body work</strong>-->
+<!--                                                <span>11:50 am - 5:20 pm</span>-->
+<!--                                            </td>-->
+<!--                                         </tr>-->
 
-                                         <tr>
-                                            <td><small>2:00 pm</small></td>
-                                            <td>
-                                                <strong>Boxing</strong>
-                                                <span>2:00 pm - 4:00 pm</span>
-                                            </td>
-                                            <td>
-                                                <strong>Power lifting</strong>
-                                                <span>3:00 pm - 6:00 pm</span>
-                                            </td>
-                                            <td></td>
-                                            <td>
-                                                <strong>Cardio</strong>
-                                                <span>6:00 pm - 9:00 pm</span>
-                                            </td>
-                                            <td></td>
-                                            <td>
-                                                <strong>Crossfit</strong>
-                                                <span>5:00 pm - 7:00 pm</span>
-                                            </td>
-                                         </tr>
-                                     </tbody>
-                                 </table>
-                             </div>
+<!--                                         <tr>-->
+<!--                                            <td><small>2:00 pm</small></td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Boxing</strong>-->
+<!--                                                <span>2:00 pm - 4:00 pm</span>-->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Power lifting</strong>-->
+<!--                                                <span>3:00 pm - 6:00 pm</span>-->
+<!--                                            </td>-->
+<!--                                            <td></td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Cardio</strong>-->
+<!--                                                <span>6:00 pm - 9:00 pm</span>-->
+<!--                                            </td>-->
+<!--                                            <td></td>-->
+<!--                                            <td>-->
+<!--                                                <strong>Crossfit</strong>-->
+<!--                                                <span>5:00 pm - 7:00 pm</span>-->
+<!--                                            </td>-->
+<!--                                         </tr>-->
+<!--                                     </tbody>-->
+<!--                                 </table>-->
+<!--                             </div>-->
 
-                    </div>
-               </div>
-     </section>
+<!--                    </div>-->
+<!--               </div>-->
+<!--     </section>-->
 
 
      <!-- CONTACT -->
@@ -395,7 +406,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                            <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                         </div>
                     </div>
-                    
+
                </div>
           </div>
      </section>
@@ -407,9 +418,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                <div class="row">
 
                     <div class="ml-auto col-lg-4 col-md-5">
-                        <p class="copyright-text">Copyright &copy; 2020 Gymso Fitness Co.
-                        
-                        <br>Design: <a href="https://www.tooplate.com">Tooplate</a></p>
+                        <p class="copyright-text">Copyright &copy; Sports Academy Info Co.
                     </div>
 
                     <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
@@ -420,7 +429,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
                         <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
                     </div>
-                    
+
                </div>
           </div>
      </footer>
@@ -466,11 +475,11 @@ https://www.tooplate.com/view/2119-gymso-fitness
     </div>
 
      <!-- SCRIPTS -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/aos.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
+     <script src="{% static 'js/jquery.min.js' %}"></script>
+     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'js/aos.js' %}"></script>
+     <script src="{% static 'js/smoothscroll.js' %}"></script>
+     <script src="{% static 'js/custom.js' %}"></script>
 
 </body>
 </html>
