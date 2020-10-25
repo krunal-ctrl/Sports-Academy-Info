@@ -2,14 +2,16 @@ from django.db import models
 from django.urls import reverse
 
 class Fitness(models.Model):
+    
     name=models.CharField(max_length=200)    
-    desc = models.TextField(max_length=1000,help_text="Enter brief desc of Fitness club(i.e gym/yoga)")
-    address = models.TextField(max_length=1000,help_text="Enter address of Fitness club(i.e gym/yoga)")
+    img = models.ImageField(upload_to='fitness/pics',default="")
+    desc = models.TextField(max_length=1000,help_text="Enter brief desc of Fitness club")
+    address = models.TextField(max_length=1000,help_text="Enter address of Fitness club")
     start_time = models.TimeField(auto_now=False,auto_now_add=False)
     end_time = models.TimeField(auto_now=False,auto_now_add=False)
     contact_no = models.IntegerField(null=True,blank=True)
     email = models.EmailField(blank=True,null=True)
-    city = models.CharField(max_length=200,default="", editable=False)
+    city = models.CharField(max_length=200,default="")
 
     class Meta:
         ordering = ['name']
@@ -20,7 +22,6 @@ class Fitness(models.Model):
     def get_absolute_url(self):
         return reverse('fitness-detail', args = [str(self.id)])
 
-        
 class Trainer(models.Model):
     fitness = models.ForeignKey(Fitness,on_delete=models.SET_NULL,null=True)
     name=models.CharField(max_length=200)
@@ -34,6 +35,7 @@ class Trainer(models.Model):
 
 class TrainingLevel(models.Model):
     fitness = models.ForeignKey(Fitness, on_delete=models.SET_NULL, null=True)
+    img = models.ImageField(upload_to='fitness/trainer',default="")
     training_name = models.CharField(max_length=200)
     training_type = models.CharField(max_length=200)
 
