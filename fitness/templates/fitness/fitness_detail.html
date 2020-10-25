@@ -87,11 +87,13 @@ https://www.tooplate.com/view/2119-gymso-fitness
                     <div class="ml-auto col-lg-5 col-md-6 col-12">
                         <div>
                             {% block content %}
-                                <h1>{{ fitness.name }}</h1><br>
-                                <h3>{{ fitness.desc }}</h3><br>
-                                <h3>{{ fitness.address }}</h3>
-                                <h6>{{ fitness.start_time }}</h6>
-                                <h6>{{ fitness.end_time }}</h6>
+                            <h1><strong>{{ fitness.name }}</strong></h1><br>
+                            <h5>Description: <i>{{ fitness.desc }}</i></h5><br>
+                            <h5>Location: <i>{{ fitness.address }}</i></h5><br>
+                            <h6>Time: {{ fitness.start_time }} - {{ fitness.end_time }}</h6><br>
+                            <h6>Contacts:</h6><br>
+                            <h5> {{ fitness.contact_no}} </h5><br>
+                            <h5> {{ fitness.email}} </h5><br>
                             {% endblock %}
                             </div>
                     </div>
