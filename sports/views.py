@@ -4,14 +4,6 @@ from .models import Academy,Sports,Coach
 from django.views import generic
 from django.http import request
 
-def index(request):
-    acd = Academy.objects.all()
-    ch = Coach.objects.all()
-
-    # print(acd[0].name,ch[0].name)
-    return render(request,'sports/index.html',context={'dic1':acd,'dic2':ch})
-
-
 class AcademyListView(generic.ListView):
     model = Academy
     # context_object_name = 'academy_list'

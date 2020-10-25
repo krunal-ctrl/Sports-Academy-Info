@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Gymso Fitness HTML Template</title>
+     <title>Home</title>
      {% load static %}
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -28,7 +28,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
 
-            <a class="navbar-brand" href="#home">Sports Academy Info</a>
+            <a class="navbar-brand" href="#home">Verywell Health</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -60,9 +60,9 @@ https://www.tooplate.com/view/2119-gymso-fitness
                         <a href="{% url 'center' %}" class="nav-link smoothScroll">Yoga</a>
                     </li>
 
-<!--                    <li class="nav-item">-->
-<!--                        <a href="#schedule" class="nav-link smoothScroll">Schedules</a>-->
-<!--                    </li>-->
+                   <!-- <li class="nav-item">
+                        <a href="#contact" class="nav-link smoothScroll">Info</a>
+                    </li> -->
 
 <!--                    <li class="nav-item">-->
 <!--                        <a href="#contact" class="nav-link smoothScroll">Contact</a>-->
@@ -91,11 +91,11 @@ https://www.tooplate.com/view/2119-gymso-fitness
                          <div class="col-lg-8 col-md-10 mx-auto col-12">
                               <div class="hero-text mt-5 text-center">
 
-                                    <h6 data-aos="fade-up" data-aos-delay="300">new way to build a healthy lifestyle!</h6>
+                                    <h6 data-aos="fade-up" data-aos-delay="300">A New Way to Build a Healthy LifeStyle!</h6>
 
-                                    <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Upgrade your body at Gymso Fitness</h1>
+                                    <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Upgrade your Health at VeryWell Health</h1>
 
-                                    <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">Get started</a>
+                                    <a href="#class" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">Get started</a>
 
                                     <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">learn more</a>
 
@@ -106,7 +106,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                </div>
      </section>
 
-
+    <div id="about">
      <section class="feature" id="feature">
         <div class="container">
             <div class="row">
@@ -144,7 +144,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
             </div>
 <!--        </div>-->
     </section>
-
+    </div>
 
      <!-- ABOUT -->
 <!--     <section class="about section" id="about">-->
@@ -205,12 +205,12 @@ https://www.tooplate.com/view/2119-gymso-fitness
                     <div class="row">
 
                             <div class="col-lg-12 col-12 text-center mb-5">
-                                <h6 data-aos="fade-up">Get A Perfect Body</h6>
+                                <h6 data-aos="fade-up">Get A Perfect Health</h6>
 
-                                <h2 data-aos="fade-up" data-aos-delay="200">Our Training Classes</h2>
+                                <h2 data-aos="fade-up" data-aos-delay="200">To Search Your Interest</h2>
                              </div>
 
-                            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400" id="sports">
                                 <div class="class-thumb">
                                     <img src="{% static 'images/class/yoga-class.jpg' %}" class="img-fluid" alt="Class">
 
@@ -226,7 +226,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                                 </div>
                             </div>
 
-                            <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                            <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500" id="fitness">
                                 <div class="class-thumb">
                                     <img src="{% static 'images/class/crossfit-class.jpg' %}" class="img-fluid" alt="Class">
 
@@ -242,7 +242,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                                 </div>
                             </div>
 
-                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600" id="yoga">
                                 <div class="class-thumb">
                                     <img src="{% static 'images/class/cardio-class.jpg' %}" class="img-fluid" alt="Class">
 
@@ -373,7 +373,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
 <!--     </section>-->
 
 
-     <!-- CONTACT -->
+     <!-- CONTACT
      <section class="contact section" id="contact">
           <div class="container">
                <div class="row">
@@ -402,14 +402,14 @@ https://www.tooplate.com/view/2119-gymso-fitness
 	3. Click "Share" and choose "Embed map" tab
 	4. Copy only URL and paste it within the src="" field below
 -->
-                        <div class="google-map" data-aos="fade-up" data-aos-delay="900">
+                        <!-- <div class="google-map" data-aos="fade-up" data-aos-delay="900">
                            <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                         </div>
                     </div>
 
                </div>
           </div>
-     </section>
+     </section> -->
 
 
      <!-- FOOTER -->
@@ -433,46 +433,6 @@ https://www.tooplate.com/view/2119-gymso-fitness
                </div>
           </div>
      </footer>
-
-    <!-- Modal -->
-    <div class="modal fade" id="membershipForm" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-
-        <div class="modal-content">
-          <div class="modal-header">
-
-            <h2 class="modal-title" id="membershipFormLabel">Membership Form</h2>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          <div class="modal-body">
-            <form class="membership-form webform" role="form">
-                <input type="text" class="form-control" name="cf-name" placeholder="John Doe">
-
-                <input type="email" class="form-control" name="cf-email" placeholder="Johndoe@gmail.com">
-
-                <input type="tel" class="form-control" name="cf-phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-
-                <textarea class="form-control" rows="3" name="cf-message" placeholder="Additional Message"></textarea>
-
-                <button type="submit" class="form-control" id="submit-button" name="submit">Submit Button</button>
-
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="signup-agree">
-                    <label class="custom-control-label text-small text-muted" for="signup-agree">I agree to the <a href="#">Terms &amp;Conditions</a>
-                    </label>
-                </div>
-            </form>
-          </div>
-
-          <div class="modal-footer"></div>
-
-        </div>
-      </div>
-    </div>
 
      <!-- SCRIPTS -->
      <script src="{% static 'js/jquery.min.js' %}"></script>
