@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Academy List</title>
+     <title>Sports Academys</title>
      {% load static %}
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -16,7 +16,13 @@
      <link rel="stylesheet" href="{% static 'css/aos.css' %}">
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="{% static 'css/tooplate-gymso-style.css' %}">
+     <link rel="stylesheet" href="{% static 'css/style-dm.css' %}">
+     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
@@ -109,7 +115,8 @@
                     <div class="ml-auto col-lg-5 col-md-6 col-12">
                         <h2 class="mb-4 pb-2" data-aos="fade-up" data-aos-delay="200">Feel free to ask anything</h2>
 
-                        <form action="#" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
+                        <form action="{% url 'academy' %}" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
+                            {% csrf_token %}
                             <input type="text" class="form-control" name="cf-name" placeholder="Name">
 
                             <input type="email" class="form-control" name="cf-email" placeholder="Email">
@@ -131,43 +138,65 @@
 	4. Copy only URL and paste it within the src="" field below
 -->
                         <div class="google-map" data-aos="fade-up" data-aos-delay="900">
-                           <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.34126308598!2d70.7090858147861!3d22.26505908534192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbcb3656ccf1%3A0xece7e5fa0b0a0519!2sV.V.P.%20Engineering%20College!5e0!3m2!1sen!2sin!4v1603699861359!5m2!1sen!2sin" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                     </div>
 
                </div>
           </div>
      </section>
-
+     
 
      <!-- FOOTER -->
      <footer class="site-footer">
-          <div class="container">
-               <div class="row">
+        <div class="container">
+             <div class="row">
 
-                    <div class="ml-auto col-lg-4 col-md-5">
-                        <p class="copyright-text">Copyright &copy; Sports Academy Info Co.
-                    </div>
+                  <div class="ml-auto col-lg-4 col-md-5">
+                      <p class="copyright-text">Copyright &copy; Sports Academy Info Co.
+                  </div>
 
-                    <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
-                        <p class="mr-4">
-                            <i class="fa fa-envelope-o mr-1"></i>
-                            <a href="#">hello@company.co</a>
-                        </p>
+                  <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
+                      <p class="mr-4">
+                          <i class="fa fa-envelope-o mr-1"></i>
+                          <a href="mailto:dishenmakwana.dm@gmail.com">dishenmakwana.dm@gmail.com</a>
+                          <br>
+                          <i class="fa fa-envelope-o mr-1"></i>
+                          <a href="mailto:dhruvvachhani.dv@gmail.com">dhruvvachhani.dv@gmail.com</a>
+                      </p>
 
-                        <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
-                    </div>
+                      <p>
+                          <a class="fa fa-phone mr-1">
+                              +91-8758516876  </a> 
+                          <br>
+                          <a class="fa fa-phone mr-1">
+                              +91-9427723843  </a>
+                      </p>
+                  </div>
 
-               </div>
-          </div>
-     </footer>
+             </div>
+        </div>
+   </footer>
 
-     <!-- SCRIPTS -->
-     <script src="{% static 'js/jquery.min.js' %}"></script>
-     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-     <script src="{% static 'js/aos.js' %}"></script>
-     <script src="{% static 'js/smoothscroll.js' %}"></script>
-     <script src="{% static 'js/custom.js' %}"></script>
+   <!-- SCRIPTS -->
+   <script src="{% static 'js/jquery.min.js' %}"></script>
+   <script src="{% static 'js/bootstrap.min.js' %}"></script>
+   <script src="{% static 'js/aos.js' %}"></script>
+   <script src="{% static 'js/smoothscroll.js' %}"></script>
+   <script src="{% static 'js/custom.js' %}"></script>
+   <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/mediaelement-and-player.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 </html>
