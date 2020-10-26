@@ -66,6 +66,99 @@ https://www.tooplate.com/view/2119-gymso-fitness
     font-family: var(--base-font-family);
   }
 
+  
+/*---------------------
+  Chooseus
+-----------------------*/
+
+.chooseus {
+	background: #f5f6fa;
+	padding-bottom: 20px;
+}
+
+.chooseus__text {
+	margin-bottom: 70px;
+}
+
+.chooseus__text h2 {
+	font-size: 44px;
+	color: #263246;
+	margin-bottom: 6px;
+}
+
+.chooseus__text p {
+	margin-bottom: 0;
+}
+
+.chooseus__item {
+	width: 50%;
+	float: left;
+	margin-bottom: 80px;
+}
+
+.chooseus__item__icon {
+	float: left;
+	margin-right: 30px;
+}
+
+.chooseus__item__text {
+	overflow: hidden;
+}
+
+.chooseus__item__text h2 {
+	font-size: 48px;
+	color: #263246;
+	line-height: 45px;
+	margin-bottom: 5px;
+}
+
+.chooseus__item__text p {
+	font-size: 18px;
+	margin-bottom: 0;
+	color: #9B9EA3;
+}
+
+.chooseus__pic img {
+	min-width: 100%;
+}
+
+/*---------------------
+  Gallery
+-----------------------*/
+
+.gallery__pic img {
+	min-width: 100%;
+}
+
+  /*---------------------
+  Services
+-----------------------*/
+
+.services {
+	padding-top: 80px;
+	padding-bottom: 70px;
+}
+
+.services__item {
+	text-align: center;
+	padding: 40px 15px 60px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 65px rgba(12, 26, 39, 0.05);
+	margin-bottom: 30px;
+	background: #ffffff;
+}
+
+.services__item h5 {
+	font-size: 20px;
+	color: #263246;
+	margin-top: 35px;
+	margin-bottom: 12px;
+}
+
+.services__item p {
+	color: #6E7580;
+	margin-bottom: 0;
+}
 
   /*---------------------------------------
      TYPOGRAPHY              

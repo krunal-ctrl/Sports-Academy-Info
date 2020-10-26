@@ -3,18 +3,6 @@ from .models import Yoga,Trainer
 from django.views import generic
 from django.http import request
 
-def contact(request):
-    return render(request,'contact.html')
-
-def about(request):
-    return render(request,'about.html')
-
-def classes(request):
-    return render(request,'classes.html')
-
-def events(request):
-    return render(request,'events.html')
-
 class YogaListView(generic.ListView):
     model = Yoga
 
