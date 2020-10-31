@@ -1,13 +1,3 @@
-# Sports-Academy-Info
-<p>
-  <a href="https://github.com/dhruv-vachhani/Sports-Academy-Info/issues">
-    <img src="https://img.shields.io/github/issues/dhruv-vachhani/Sports-Academy-Info"/> 
-  </a>
-  <a href="https://github.com/dhruv-vachhani/Sports-Academy-Info/members">
-    <img src="https://img.shields.io/github/forks/dhruv-vachhani/Sports-Academy-Info"/> 
-  </a>
-</p>
-  
 **This website helps the people to find the gym, sports acadamy, yoga center which is nearest to them. It also remind the user and motivate the user to do excercise.**
 
 Website is made using the Django frame work which is the widly used frame work to develop the website using python.
